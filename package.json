@@ -1,0 +1,21 @@
+{
+  "name": "Lonsid.IoT.miniprogram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://devops.lonsid.cn/Lonsid/Lonsid.IoT.miniprogram/_git/Lonsid.IoT.miniprogram"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "uni-read-pages": "^1.0.5",
+    "uni-simple-router": "^2.0.6",
+    "uview-ui": "^1.8.4"
+  }
+}

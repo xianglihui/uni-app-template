@@ -1,0 +1,114 @@
+{
+  "easycom": {
+    //配置easycom规则后，自动按需引入，无需import组件，直接引用即可。
+    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+  },
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "name": "index",
+      "aliasPath": "/",
+      "meta": {
+        "title": "首页"
+      },
+      "style": {
+        "navigationBarTitleText": "首页",
+        // "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        },
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/classify/index",
+      "name": "classify",
+      "aliasPath": "/classify",
+      "meta": {
+        "title": "分类"
+      },
+      "style": {
+        "navigationBarTitleText": "分类",
+        "enablePullDownRefresh": false
+        // "navigationStyle": "custom" 
+      }
+    },
+    {
+      "path": "pages/shopping/index",
+      "name": "shopping",
+      "meta": {
+        "title": "购物车"
+      },
+      "style": {
+        "navigationBarTitleText": "购物车",
+        // "navigationStyle": "custom", 
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        },
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/my/index",
+      "name": "my",
+      "aliasPath": "/my",
+      "meta": {
+        "title": "我的",
+        "auth": true
+      },
+      "style": {
+        "navigationBarTitleText": "我的",
+        // "navigationStyle": "custom",
+        "app-plus": {
+          "titleNView": false,
+          "bounce": "none"
+        },
+        "enablePullDownRefresh": false
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages/subpages/authorizationLogin",
+      "pages": [
+        {
+          "path": "index",
+          "name": "Login",
+          "aliasPath": "/Login",
+          "meta": {
+            "title": "授权"
+          },
+          "style": {
+            "navigationBarTitleText": "授权",
+            "enablePullDownRefresh": false
+          }
+        }
+      ]
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index"
+      },
+      {
+        "pagePath": "pages/classify/index"
+      },
+      {
+        "pagePath": "pages/shopping/index"
+      },
+      {
+        "pagePath": "pages/my/index"
+      }
+    ]
+  }
+}
