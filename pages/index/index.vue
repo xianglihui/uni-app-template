@@ -1,6 +1,7 @@
 <template>
   <view>
     首页
+    <view @click="go">查看购物车</view>
     <!-- 底部菜单 -->
     <u-tabbar
       v-model="current"
@@ -50,10 +51,24 @@ export default {
   onLoad() {
     // GetUserInfoHandler(this)
   },
-  methods: {},
+  methods: {
+    async go() {
+      await this.isLogin();
+      // 剩余逻辑xxx
+    },
+    // 按钮级别登录控制
+    isLogin() {
+      return new Promise((reslove, reject) => {
+        if (!this.$store.getters.token) {
+          //未登录
+          this.$Router.push({ name: "Login", params: { back: true } });
+          return false;
+        }
+        reslove(!!this.$store.getters.token);
+      });
+    },
+  },
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
